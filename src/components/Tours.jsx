@@ -1,5 +1,5 @@
 import { tours } from "../data";
-import { useState } from "../data";
+import { useState } from "react";
 import Title from "./Title";
 import Tour from "./Tour";
 
