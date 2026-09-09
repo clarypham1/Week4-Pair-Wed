@@ -1,4 +1,4 @@
-function Tour({ image, date, title, info, location, duration, cost, difficulty, rating }) {
+function Tour({ id, image, date, title, info, location, duration, cost, difficulty, rating }) {
   return (
     <article className="tour-card">
       <div className="tour-img-container">
@@ -22,6 +22,13 @@ function Tour({ image, date, title, info, location, duration, cost, difficulty, 
           <p>from {cost}</p>
           <p>{duration} days</p>
         </div>
+        <button 
+        className='btn' 
+        onClick={() => onRemove(id)}
+        style={{ marginTop: '1rem' }}
+      >
+        Remove Tour
+      </button>
       </div>
     </article>
   );
