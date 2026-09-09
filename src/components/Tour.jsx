@@ -22,14 +22,14 @@ function Tour({ id, image, date, title, info, location, duration, cost, difficul
           <p>from {cost}</p>
           <p>{duration} days</p>
         </div>
-        <button 
-        className='btn' 
+      </div>
+      <button
+        className='btn'
         onClick={() => onRemove(id)}
         style={{ marginTop: '1rem' }}
       >
         Remove Tour
       </button>
-      </div>
     </article>
   );
 }
