@@ -12,15 +12,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
+      {/* existing JSX here - don't change the content yet */}
       <Header />
       <Hero />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/tours" element={<Tours />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <About />
+      <Services />
+      <Tours />
       <Footer />
     </BrowserRouter>
   );

@@ -11,7 +11,11 @@ const Services = () => {
 
       <div className='section-center services-center'>
         {servicesData.map((service) => {
-          return <Service {...service} key={service.id} />
+          return 
+                <div>
+                  <Service {...service} key={service.id} />
+                  <button onClick={setServiceData=([])}>Not Interested</button>
+                </div>
         })}
       </div>
     </section>
