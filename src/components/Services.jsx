@@ -1,21 +1,27 @@
 import { services } from '../data';
 import { useState } from 'react';
 import Title from './Title';
-import Service from './Service'; 
+import Service from './Service';
 
 const Services = () => {
   const [servicesData, setServicesData] = useState(services);
+
+  const handleRemoveService = (serviceId) => {
+    setServicesData(servicesData.filter(service => service.id !== serviceId));
+  };
   return (
     <section className='section services' id='services'>
       <Title title='our' subTitle='services' />
 
       <div className='section-center services-center'>
         {servicesData.map((service) => {
-          return 
-                <div>
-                  <Service {...service} key={service.id} />
-                  <button onClick={setServiceData=([])}>Not Interested</button>
-                </div>
+          return (
+            <Service
+              {...service}
+              key={service.id}
+              onRemove={handleRemoveService}
+            />
+          )
         })}
       </div>
     </section>
